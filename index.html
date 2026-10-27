@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <!-- head section -->
+        <head>
+            <!--linking the CSS file-->
+            <link rel="stylesheet" href="./styles.css"/>
+            <!--linking google fonts-->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trocchi">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+            <!--linking Bootstrap-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet" 
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+            crossorigin="anonymous">
+            <!-- webpage title -->
+            <title>
+                Dyllon Smith's Portfolio
+            </title>
+        </head>
+
+    <!-- body section -->
+    <body>
+        <div class="container">
+            <div id="header" class="header">
+                <div class="row bg-light-success bg-gradient">
+                    <div class="col-12">
+                        <span class="no-break"><h1>Dyllon Smith</h1></span>
+                    </div>
+                    <div class="col-12">
+                        <span class="no-break"><h3>Game Designer / Developer</h3></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="col">
+                <div class="main-content">
+                    <div class="row gy-5" id="about_me">
+                        <h3>About Me</h3>
+                        <p id="introduction"></p>
+                        <p>
+                            I have always had an interest in people's behaviors. Ever since 
+                            I was young I have observed those around me. I have also been 
+                            interested in programming and video games. 
+                            These interest finally culminated and lead me to pursuing a 
+                            career in game design. 
+                        </p>
+                    </div>
+                    <div class="row gy-5" id="education">
+                        <!--Education Section-->
+                        <h5>Education</h5>
+                        <div id="table"></div>
+                        <table class="table table-striped">
+                            <!--table head-->
+                            <thead>
+                                <!--table title-->
+                                <tr>
+                                    <th scope="col">Education</th>
+                                </tr>
+                                <tr>
+                                    <b>
+                                    <th scope="col">Institution</th>
+                                    <th scope="col">Awarded</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Date of Completion</th>
+                                    </b>
+                                </tr>
+                            </thead>
+                            <!--table body-->
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Westwood High School</td>
+                                    <td>
+                                        <i>High School Diploma</i>
+                                    </td>
+                                    <td>Four Years</td>
+                                    <td>May 2024</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Dassault Systèmes</td>
+                                    <td>
+                                        <i>Certificate for Mechanical Design</i>
+                                    </td>
+                                    <td>One Year</td>
+                                    <td>May 2022</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Northern Arizona University</td>
+                                    <td>
+                                        <i>Bachelor of Science in Immersive Media and Games</i>
+                                    </td>
+                                    <td>Four Years</td>
+                                    <td>Expected May 2028</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Northern Arizona University</td>
+                                    <td>
+                                        <i>Minor in Psychology</i>
+                                    </td>
+                                    <td>Four Years</td>
+                                    <td>Expected May 2028</td>
+                                </tr>
+                            </tbody>           
+                        </table>
+                    </div>
+                    <!--Experience Section-->
+                    <div id="skills">
+                        <div class="row gy-5">
+                            <h3>Skillset</h3>
+                        </div>
+                        <div class="row" data-bs-trigger="hover" >
+                            <div class="card" id="software" style="width: 18rem; height: fit-content">
+                                <div class="card-header">
+                                    Software
+                                </div>
+                                <ul id="soft-ul" class="list-group list-group-flush">
+                                    <li class="list-group-item">One Year in Godot</li>
+                                    <li class="list-group-item">One Year in Visual Studio Code</li>
+                                    <li class="list-group-item">One Year in Aesprite</li>
+                                    <li class="list-group-item">One Year in GitHub</li>
+                                </ul>
+                                <form id="software-form" onsubmit="addSoftware()">
+                                    Add New Software: <input type="text" id="software-name">
+                                    <button type="submit">Submit</button>
+                                </form>
+                        </div>
+                            <div class="card" id="Languages" style="width: 18rem; height: fit-content">
+                                <div class="card-header">
+                                    Languages
+                                </div>
+                                <ul id="lang-ul" class="list-group list-group-flush">
+                                    <li class="list-group-item">One Year in C</li>
+                                    <li class="list-group-item">Six Months in C++</li>
+                                    <li class="list-group-item">One Year in GDSCript</li>
+                                    <li class="list-group-item">One Year in Python</li>
+                                </ul>
+                                <form id="language-form" onsubmit="addLanguage()">
+                                    Add New Software: <input type="text" id="language-name">
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Projects Section-->
+                    <div class="row gy-5" id="projects">
+                        <h3>Projects</h3>
+                        <a button type="button" class="btn btn-primary"
+                        id="sort-by-deadline" onclick="sortByDeadline()">Sort by Deadline</a>
+                        <div id="alice-proj" class="card" style="width: 18rem;">
+                            <img src=""
+                             class="card-img-top"
+                             alt="Alice in Wonderland Movie Poster with Mad Hatter">
+                            <div class="card-body">
+                                <h5 class="proj-title" class="card-title"></h5>
+                                <p class="proj-dscr" class="card-text"></p>
+                                <p class="proj-time" class="card-text"></p>
+                                <a href="files/AliceInWonderland/index.html" class="btn btn-primary">Play</a>
+                            </div>
+                        </div>
+                        <div id="alice-proj2" class="card" style="width: 18rem;">
+                            <img src=""
+                             class="card-img-top"
+                             alt="Alice in Wonderland Movie Poster with Mad Hatter">
+                            <div class="card-body">
+                                <h5 class="proj-title" class="card-title"></h5>
+                                <p class="proj-dscr" class="card-text"></p>
+                                <p class="proj-time" class="card-text"></p>
+                                <a href="files/AliceInWonderland/index.html" class="btn btn-primary">Play</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Resume Section-->
+                    <div class="row gy-5" id="resume">
+                        <h3>Resume</h3>
+                        <p>
+                            Please download my resume
+                            <a button type="button" class="btn btn-primary"
+                             id="resume_button" href="files\Resume.pdf" 
+                             download="Dyllon_Smith_Resume"> here.</a>
+                            <div class="downloaded">Has not been downloaded yet.</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col bg-light-success bg-gradient" id="contact_info">
+                <div class="row">
+                    <span><h3>Contact Information: </h3></span>
+                </div>
+                <div class="row">
+                    <span class="no-break">Phone Number: <a href="tel:+16028591619">602-859-1619 </a></span>   
+                </div>
+                <div class="row">
+                        <span class="no-break">Buisness Email: 
+                    <a href ="mailto:dyllonsmith5454@gmail.com">
+                        dyllonsmith5454@gmail.com </a></span>
+                </div>
+                <div class="row">
+                    <span class="no-break">School Email: <a href ="mailto:drs544@nau.edu">
+                        drs544@nau.edu </a></span>
+                </div>
+            </div>
+            <a href="#header">Top of Page</a>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
